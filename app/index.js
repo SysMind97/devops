@@ -5,6 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const ENV = process.env.APP_ENV || "development";
 
+app.use(express.static("public"));
 app.use(express.json());
 
 app.get("/", (req, res) => {
